@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
             <body
                 className={`${degularDisplay.variable} ${ttHoves.variable} bg-white`}
             >
-                <header className="container mx-auto my-14 flex items-start justify-between px-4">
+                <header className="container mx-auto mt-10 flex items-start justify-between px-5">
                     <Image
                         src={indiaHciLogo}
                         alt="India HCI 2023 Logo"
@@ -243,47 +243,49 @@ export default function RootLayout({ children }) {
                     </nav>
                 </header>
                 {children}
-                <footer className="mt-14 flex w-full flex-row items-center justify-between gap-12 bg-zinc-900 p-20">
-                    <a
-                        href="https://www.indiahci.org/2023/"
-                        target="_blank"
-                        rel="noreferrer noopener"
-                    >
-                        <Image
-                            src={indiaHciLogoMonochrome}
-                            alt="India HCI 2023 Logo"
-                            width={80}
-                            height={48}
-                        />
-                    </a>
-                    <div className="flex flex-row items-center gap-20">
+                <div className="bg-zinc-900">
+                    <footer className="container mx-auto mt-10 flex items-start justify-between p-20 px-5">
                         <a
-                            href="https://www.indiahci.org/"
+                            href="https://www.indiahci.org/2023/"
                             target="_blank"
                             rel="noreferrer noopener"
                         >
                             <Image
-                                className="-mt-4"
-                                src={hcipaiLogo}
-                                alt="HCIPAI Logo"
-                                width={128}
-                                height={40}
+                                src={indiaHciLogoMonochrome}
+                                alt="India HCI 2023 Logo"
+                                width={80}
+                                height={48}
                             />
                         </a>
-                        <a
-                            href="https://www.linkedin.com/company/flychi"
-                            target="_blank"
-                            rel="noreferrer noopener"
-                        >
-                            <Image
-                                src={flychiLogo}
-                                alt="FlyCHI (UPES ACM SIGCHI Student Chapter) Logo"
-                                width={140}
-                                height={40}
-                            />
-                        </a>
-                    </div>
-                </footer>
+                        <div className="flex flex-row items-center gap-20">
+                            <a
+                                href="https://www.indiahci.org/"
+                                target="_blank"
+                                rel="noreferrer noopener"
+                            >
+                                <Image
+                                    className="-mt-4"
+                                    src={hcipaiLogo}
+                                    alt="HCIPAI Logo"
+                                    width={128}
+                                    height={40}
+                                />
+                            </a>
+                            <a
+                                href="https://www.linkedin.com/company/flychi"
+                                target="_blank"
+                                rel="noreferrer noopener"
+                            >
+                                <Image
+                                    src={flychiLogo}
+                                    alt="FlyCHI (UPES ACM SIGCHI Student Chapter) Logo"
+                                    width={140}
+                                    height={40}
+                                />
+                            </a>
+                        </div>
+                    </footer>
+                </div>
             </body>
         </html>
     );
