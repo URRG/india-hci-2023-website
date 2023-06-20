@@ -24,12 +24,14 @@ export default function RootLayout({ children }) {
                 className={`${degularDisplay.variable} ${ttHoves.variable} bg-white`}
             >
                 <header className="container mx-auto mt-5 flex items-start justify-between px-5 md:mt-10">
-                    <Image
-                        src={indiaHciLogo}
-                        alt="India HCI 2023 Logo"
-                        width={140}
-                        height={117}
-                    />
+                    <Link href="/">
+                        <Image
+                            src={indiaHciLogo}
+                            alt="India HCI 2023 Logo"
+                            width={140}
+                            height={117}
+                        />
+                    </Link>
 
                     <nav className="gap-14 md:hidden">
                         <Popover className="">
@@ -58,7 +60,7 @@ export default function RootLayout({ children }) {
                                         leaveFrom="opacity-100 translate-y-0"
                                         leaveTo="opacity-0 translate-y-1"
                                     >
-                                        <Popover.Panel className="absolute left-[20px] top-2 z-30 mt-3 flex h-[calc(100%-132px)] w-[calc(100%-40px)] flex-col overflow-scroll rounded-2xl bg-zinc-900 font-body text-sm font-normal text-white outline-none outline-1 outline-offset-0 outline-zinc-500">
+                                        <Popover.Panel className="absolute left-[12px] top-[0px] z-30 mt-3 flex h-[calc(100%-24px)] w-[calc(100%-24px)] flex-col overflow-scroll rounded-2xl bg-zinc-900 font-body text-sm font-normal text-white">
                                             <Popover.Button className="absolute right-4 top-4">
                                                 <Icon
                                                     className="h-8 w-8 text-white"
@@ -79,7 +81,7 @@ export default function RootLayout({ children }) {
                                                     Partners & Sponsors
                                                 </Link>
                                             </div>
-                                            <div className="flex flex-col gap-4 p-6">
+                                            <div className="flex flex-col gap-4 border-b border-zinc-800 p-6">
                                                 <p className="inline-flex items-center text-sm font-semibold uppercase text-amber-500">
                                                     Attendees
                                                 </p>
@@ -399,8 +401,8 @@ export default function RootLayout({ children }) {
                     </nav>
                 </header>
                 {children}
-                <div className="bg-zinc-900">
-                    <footer className="container mx-auto flex flex-col items-center justify-between gap-40 p-12 px-5 sm:flex-row sm:gap-0">
+                <div className="relative -z-10 -mt-5 bg-zinc-900">
+                    <footer className="container mx-auto flex flex-col items-center justify-between gap-10 p-12 px-5 pt-24 sm:flex-row sm:gap-0 md:pt-16">
                         <a
                             href="https://www.indiahci.org/2023/"
                             target="_blank"
@@ -412,7 +414,8 @@ export default function RootLayout({ children }) {
                                 width={120}
                             />
                         </a>
-                        <div className="relative right-4 flex flex-col items-center gap-10 sm:flex-row sm:gap-20">
+                        <hr className="my-8 h-px w-full border border-zinc-800/20 sm:hidden" />
+                        <div className="relative right-4 flex flex-col items-center gap-16 sm:flex-row sm:gap-20">
                             <a
                                 href="https://www.indiahci.org/"
                                 target="_blank"
@@ -422,7 +425,7 @@ export default function RootLayout({ children }) {
                                     className="-mt-4"
                                     src={hcipaiLogo}
                                     alt="HCIPAI Logo"
-                                    width={128}
+                                    width={160}
                                     height={40}
                                 />
                             </a>
@@ -434,7 +437,7 @@ export default function RootLayout({ children }) {
                                 <Image
                                     src={flychiLogo}
                                     alt="FlyCHI (UPES ACM SIGCHI Student Chapter) Logo"
-                                    width={140}
+                                    width={160}
                                     height={40}
                                 />
                             </a>
