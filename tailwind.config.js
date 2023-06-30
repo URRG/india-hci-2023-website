@@ -22,5 +22,8 @@ module.exports = {
             },
         },
     },
-    plugins: [require('@headlessui/tailwindcss')],
+    plugins: [
+        require('@tailwindcss/container-queries'),
+        require('@headlessui/tailwindcss'),
+    ],
 };
