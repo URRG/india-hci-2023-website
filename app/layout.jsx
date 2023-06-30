@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
                         />
                     </Link>
 
-                    <nav className="gap-14 md:hidden">
+                    {/* <nav className="gap-14 md:hidden">
                         <Popover className="">
                             {({ open }) => (
                                 <>
@@ -398,7 +398,7 @@ export default function RootLayout({ children }) {
                                 </>
                             )}
                         </Popover>
-                    </nav>
+                    </nav> */}
                 </header>
                 {children}
                 <div className="relative -z-10 -mt-5 bg-zinc-900">
