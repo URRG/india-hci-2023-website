@@ -403,9 +403,10 @@ export default function RootLayout({ children }) {
                 </div>
                 {children}
                 <div className="relative -z-10 -mt-5 flex w-full justify-center">
-                    <footer className="container absolute z-20 mx-auto flex flex-col justify-between gap-8 bg-zinc-900 p-12 pt-16 font-body text-base font-medium text-zinc-500 md:flex-row">
+                    <footer className="container absolute z-20 mx-auto flex flex-col justify-between gap-8 bg-zinc-900 p-12 pt-16 md:flex-row">
                         <div className="flex flex-col gap-4 md:flex-row">
                             <a
+                                className="font-body text-base font-medium text-zinc-500 hover:text-white"
                                 href="https://www.indiahci.org/"
                                 target="_blank"
                                 rel="noreferrer noopener"
@@ -414,6 +415,7 @@ export default function RootLayout({ children }) {
                             </a>
                             <span className="text-white"> &bull; </span>
                             <a
+                                className="font-body text-base font-medium text-zinc-500 hover:text-white"
                                 href="https://www.linkedin.com/company/flychi"
                                 target="_blank"
                                 rel="noreferrer noopener"
@@ -422,6 +424,7 @@ export default function RootLayout({ children }) {
                             </a>
                             <span className="text-white"> &bull; </span>
                             <a
+                                className="font-body text-base font-medium text-zinc-500 hover:text-white"
                                 href="https://www.instagram.com/india_hci/"
                                 target="_blank"
                                 rel="noreferrer noopener"
@@ -429,6 +432,7 @@ export default function RootLayout({ children }) {
                                 Instagram
                             </a>
                             <a
+                                className="font-body text-base font-medium text-zinc-500 hover:text-white"
                                 href="https://www.linkedin.com/company/india-hci/"
                                 target="_blank"
                                 rel="noreferrer noopener"
@@ -436,6 +440,7 @@ export default function RootLayout({ children }) {
                                 Linkedin
                             </a>
                             <a
+                                className="font-body text-base font-medium text-zinc-500 hover:text-white"
                                 href="https://www.facebook.com/IndiaHCI/"
                                 target="_blank"
                                 rel="noreferrer noopener"
@@ -445,7 +450,7 @@ export default function RootLayout({ children }) {
                         </div>
                         <Link
                             href="/"
-                            className="bg-gradient-to-r from-amber-500 via-orange-500 via-30% to-[#ff2d68] bg-clip-text font-medium text-transparent"
+                            className="bg-gradient-to-r from-amber-500 via-orange-500 via-30% to-[#ff2d68] bg-clip-text text-base font-medium text-transparent hover:text-white"
                         >
                             India HCI 2023
                         </Link>

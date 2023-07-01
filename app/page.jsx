@@ -160,10 +160,10 @@ export default function Home() {
                                     <button
                                         className={`${
                                             imFeelingCreativeSent
-                                                ? 'h-full w-full'
-                                                : 'h-12 w-12'
+                                                ? 'h-full w-full hover:scale-[1.03]'
+                                                : 'h-12 w-12 hover:scale-[1.1]'
                                         }
-                                        flex items-center justify-center rounded-full bg-gradient-to-br from-amber-500 via-orange-500 via-30% to-[#FF0048] shadow-2xl transition-all duration-300 hover:scale-[1.03]`}
+                                        flex items-center justify-center rounded-full bg-gradient-to-br from-amber-500 via-orange-500 via-30% to-[#FF0048] shadow-2xl transition-all duration-300`}
                                         type="button"
                                         onClick={handleImFeelingCreativeClick}
                                     >
@@ -210,7 +210,7 @@ export default function Home() {
                         >
                             {({ checked }) => (
                                 <button
-                                    className="relative z-10 flex h-16 w-full items-center rounded-full bg-zinc-900 p-2 shadow-2xl transition duration-300 @container hover:scale-[1.02]"
+                                    className="relative z-10 flex h-16 w-full items-center rounded-full bg-zinc-900 p-2 shadow-2xl transition duration-300 @container hover:scale-[1.02] hover:bg-zinc-800"
                                     type="button"
                                 >
                                     <span
