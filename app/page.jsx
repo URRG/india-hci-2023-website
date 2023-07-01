@@ -101,7 +101,7 @@ export default function Home() {
     };
 
     return (
-        <div className="flex flex-col overflow-clip rounded-3xl bg-white">
+        <div className="flex flex-col overflow-clip rounded-bl-3xl rounded-br-3xl bg-white">
             <main className="flex flex-col items-center px-4">
                 <div className="mt-10 flex min-h-[580px] w-full flex-col gap-4 lg:grid lg:grid-cols-12 lg:grid-rows-4">
                     <div className="flex flex-col justify-between gap-8 rounded-3xl bg-zinc-900 p-6 pb-0 lg:col-span-4 lg:col-start-1 lg:row-span-full">

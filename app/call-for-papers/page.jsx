@@ -10,7 +10,7 @@ import Button from '../../components/Button/Button';
 
 export default function Home() {
     return (
-        <div className="flex flex-col overflow-clip rounded-3xl bg-white">
+        <div className="flex flex-col overflow-clip rounded-bl-3xl rounded-br-3xl bg-white">
             <main className="flex flex-col items-center px-4">
                 <div className="mt-10 grid grid-cols-8 gap-4">
                     <div className="col-span-full flex flex-col justify-between gap-6 rounded-3xl bg-zinc-100 p-6 lg:col-span-3">
