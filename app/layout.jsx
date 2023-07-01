@@ -11,9 +11,6 @@ import { Popover, Transition } from '@headlessui/react';
 import { degularDisplay, ttHoves } from '../styles/fonts';
 
 import indiaHciLogo from '../public/logos/india-hci-2023-logo.svg';
-import indiaHciLogoMonochrome from '../public/logos/india-hci-2023-monochrome-logo.svg';
-import hcipaiLogo from '../public/logos/hcipai-logo.svg';
-import flychiLogo from '../public/logos/flychi-logo.svg';
 
 import './globals.css';
 
