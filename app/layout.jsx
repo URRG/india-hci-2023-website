@@ -22,14 +22,14 @@ export default function RootLayout({ children }) {
             >
                 <div className="bg-white">
                     <header className="container mx-auto flex items-start justify-between bg-white px-5 pt-5 md:pt-10">
-                        <Link href="/">
+                        <a href={process.env.BASE_PATH}>
                             <Image
                                 src={indiaHciLogo}
                                 alt="India HCI 2023 Logo"
                                 width={140}
                                 height={117}
                             />
-                        </Link>
+                        </a>
                         {/* <nav className="gap-14 md:hidden">
                             <Popover className="">
                                 {({ open }) => (
@@ -445,12 +445,12 @@ export default function RootLayout({ children }) {
                                 Facebook
                             </a>
                         </div>
-                        <Link
-                            href="/"
+                        <a
+                            href={process.env.BASE_PATH}
                             className="bg-gradient-to-r from-amber-500 via-orange-500 via-30% to-[#ff2d68] bg-clip-text text-base font-medium text-transparent hover:text-white"
                         >
                             India HCI 2023
-                        </Link>
+                        </a>
                     </footer>
                 </div>
             </body>
