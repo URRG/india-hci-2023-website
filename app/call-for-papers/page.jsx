@@ -8,6 +8,9 @@ import { Disclosure, Transition } from '@headlessui/react';
 import gradient from '../../public/videos/gradient.webm';
 import Button from '../../components/Button/Button';
 
+import chairAnirudhaJoshi from '../../public/images/anirudha-joshi.jpg';
+import chairGavinSim from '../../public/images/gavin-sim.jpg';
+
 export default function Home() {
     return (
         <div className="flex flex-col overflow-clip rounded-bl-3xl rounded-br-3xl bg-white">
@@ -194,7 +197,13 @@ export default function Home() {
                         </h1>
                         <div className="flex flex-wrap justify-center gap-8">
                             <div className="flex flex-col items-center gap-2">
-                                <div className="h-24 w-24 rounded-full bg-zinc-700" />
+                                <Image
+                                    className="rounded-full bg-zinc-700"
+                                    src={chairAnirudhaJoshi}
+                                    alt="Anirudha Joshi"
+                                    width={96}
+                                    height={96}
+                                />
                                 <span className="font-body text-base text-white">
                                     Anirudha Joshi
                                 </span>
@@ -203,7 +212,13 @@ export default function Home() {
                                 </span>
                             </div>
                             <div className="flex flex-col items-center gap-2">
-                                <div className="h-24 w-24 rounded-full bg-zinc-700" />
+                                <Image
+                                    className="rounded-full bg-zinc-700"
+                                    src={chairGavinSim}
+                                    alt="Gavin R. Sim"
+                                    width={96}
+                                    height={96}
+                                />
                                 <span className="font-body text-base text-white">
                                     Gavin R. Sim
                                 </span>

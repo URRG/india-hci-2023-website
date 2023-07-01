@@ -104,7 +104,7 @@ export default function Home() {
         <div className="flex flex-col overflow-clip rounded-bl-3xl rounded-br-3xl bg-white">
             <main className="flex flex-col items-center px-4">
                 <div className="mt-10 flex min-h-[580px] w-full flex-col gap-4 lg:grid lg:grid-cols-12 lg:grid-rows-4">
-                    <div className="flex flex-col justify-between gap-8 rounded-3xl bg-zinc-900 p-6 pb-0 lg:col-span-4 lg:col-start-1 lg:row-span-full">
+                    <div className="flex flex-col justify-between gap-24 rounded-3xl bg-zinc-900 p-6 pb-0 @container md:gap-8 lg:col-span-4 lg:col-start-1 lg:row-span-full">
                         <div className="flex flex-col gap-6">
                             <h1 className="bg-gradient-to-br from-amber-500 via-orange-500 via-30% to-[#FF0048] bg-clip-text font-heading text-2xl text-transparent sm:text-4xl">
                                 India HCI 2023
@@ -117,7 +117,7 @@ export default function Home() {
                                 high-quality research in HCI and Design.
                             </p>
                         </div>
-                        <div className="flex h-72 flex-col gap-2 rounded-tl-3xl rounded-tr-3xl border-2 border-b-0 border-zinc-700">
+                        <div className="flex h-[60cqh] flex-col gap-2 rounded-tl-3xl rounded-tr-3xl border-2 border-b-0 border-zinc-700 lg:h-72">
                             <div className="flex flex-row justify-center gap-2 p-4">
                                 <div className="h-4 w-12 rounded-full bg-zinc-700" />
                                 <div className="h-4 w-4 rounded-full bg-zinc-700" />
