@@ -53,6 +53,7 @@ export default function Button({
 }
 
 Button.propTypes = {
+    className: PropTypes.string,
     label: PropTypes.string.isRequired,
     widthMode: PropTypes.oneOf(['full', 'auto']).isRequired,
     linkType: PropTypes.oneOf(['internal', 'external']),
@@ -60,6 +61,7 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
+    className: '',
     linkType: 'internal',
     linkHref: '/',
 };

@@ -74,8 +74,7 @@ function ImageCursor({
 }
 
 ImageCursor.propTypes = {
-    parentRef: PropTypes.shape({ current: PropTypes.instanceOf(Element) })
-        .isRequired,
+    parentRef: PropTypes.shape({ current: PropTypes.any }).isRequired,
     imageSrc: PropTypes.string.isRequired,
     imageAlt: PropTypes.string,
     imageSize: PropTypes.number.isRequired,
