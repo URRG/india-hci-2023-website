@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "NODE_ENV=production next build",
+    "build": "next build",
+    "india-hci-website-build": "BASE_PATH=/2023 next build",
+    "github-pages-build": "BASE_PATH=/india-hci-2023-website next build",
     "start": "next start",
     "lint": "next lint"
   },

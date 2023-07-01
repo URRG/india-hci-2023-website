@@ -1,10 +1,13 @@
 /** @type {import('next').NextConfig} */
 const withVideos = require('next-videos');
 
-const isProd = process.env.NODE_ENV === 'production';
+const isBasePathSet = !!process.env.BASE_PATH;
 
 const nextConfig = {
-    basePath: isProd ? '/2023' : undefined,
+    basePath: isBasePathSet ? process.env.BASE_PATH : undefined,
+    images: {
+        unoptimized: true,
+    },
     output: 'export',
 };
 
