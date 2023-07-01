@@ -1,11 +1,13 @@
 'use client';
 
 import React, { Fragment } from 'react';
+import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Icon } from '@iconify/react';
 import { Popover, Transition } from '@headlessui/react';
+import MyApp from './ls';
 
 // import { Root } from 'postcss';
 import { degularDisplay, ttHoves } from '../styles/fonts';
@@ -17,9 +19,17 @@ import './globals.css';
 export default function RootLayout({ children }) {
     return (
         <html lang="en">
+            <Helmet>
+                <title>India HCI 2023 - HCI For Enabling Creativity</title>
+                <meta
+                    name="description"
+                    content="Immerse yourself in a world of boundless possibilities as we explore the intersection of human-computer interaction and unleashing creativity. India HCI 2023 introduces the theme of HCI for Enabling Creativity for the international conference in the field of Human-Computer Interaction to positively impact and shape humanity through high-quality research in HCI and Design."
+                />
+            </Helmet>
             <body
                 className={`${degularDisplay.variable} ${ttHoves.variable} bg-zinc-900`}
             >
+                <div> <MyApp /> </div>
                 <div className="bg-white">
                     <header className="container mx-auto flex items-start justify-between bg-white px-5 pt-5 md:pt-10">
                         <a href={process.env.BASE_PATH}>

@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import Image from 'next/image';
 import Marquee from 'react-fast-marquee';
 import { Icon } from '@iconify/react';
@@ -14,6 +15,9 @@ import chairSachinPatil from '../../public/images/sachin-patil.jpg';
 export default function Home() {
     return (
         <div className="flex flex-col overflow-clip rounded-bl-3xl rounded-br-3xl bg-white">
+            <Helmet>
+                <title>India HCI 2023 - Call For Workshops & Courses</title>
+            </Helmet>
             <main className="flex flex-col items-center px-4">
                 <div className="mt-10 grid grid-cols-12 gap-4">
                     <div className="col-span-full flex flex-col gap-6 self-start rounded-3xl bg-zinc-100 p-6 md:col-span-4">
