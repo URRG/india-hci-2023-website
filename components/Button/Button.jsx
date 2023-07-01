@@ -43,7 +43,7 @@ export default function Button({
                             src={swiggleYellow}
                             alt="swiggly-line"
                             width="1600"
-                            height="400"
+                            height="2"
                         />
                     </Marquee>
                 )}
