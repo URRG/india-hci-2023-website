@@ -129,22 +129,22 @@ const ttHoves = localFont({
             style: 'italic',
         },
         {
-            path: '../public/fonts/TT Hoves/TT Hoves Demibold.otf',
+            path: '../public/fonts/TT Hoves/TT Hoves DemiBold.otf',
             weight: '600',
             style: 'normal',
         },
         {
-            path: '../public/fonts/TT Hoves/TT Hoves Demibold Italic.otf',
+            path: '../public/fonts/TT Hoves/TT Hoves DemiBold Italic.otf',
             weight: '600',
             style: 'italic',
         },
         {
-            path: '../public/fonts/TT Hoves/TT Hoves Extrabold.otf',
+            path: '../public/fonts/TT Hoves/TT Hoves ExtraBold.otf',
             weight: '800',
             style: 'normal',
         },
         {
-            path: '../public/fonts/TT Hoves/TT Hoves Extrabold Italic.otf',
+            path: '../public/fonts/TT Hoves/TT Hoves ExtraBold Italic.otf',
             weight: '800',
             style: 'italic',
         },
