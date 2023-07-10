@@ -262,6 +262,7 @@ export default function Home() {
                         href="https://goo.gl/maps/2PSCKqNF95YrLyaeA"
                         target="_blank"
                         rel="noopener noreferrer"
+                        tabIndex="0"
                     >
                         <div className="absolute inset-0 bg-black opacity-50 transition duration-300 group-hover:opacity-0" />
                         <Icon
@@ -272,7 +273,7 @@ export default function Home() {
                             School of Design, UPES, Dehradun
                         </span>
                     </a>
-                    <div className="align-center relative flex overflow-hidden rounded-3xl bg-zinc-50 lg:col-span-2 lg:col-start-7 lg:row-span-2 lg:row-start-3">
+                    <div className="align-center pointer-events-none relative flex overflow-hidden rounded-3xl bg-zinc-50 lg:col-span-2 lg:col-start-7 lg:row-span-2 lg:row-start-3">
                         <video
                             className="pointer-events-none absolute left-0 top-0 h-full w-full object-cover"
                             src={gradient}
@@ -284,7 +285,8 @@ export default function Home() {
                             tabIndex={-1}
                         />
                         <Marquee className="pb-8 pt-6 font-heading text-6xl text-zinc-900/70 mix-blend-overlay">
-                            Enabling Creativity&nbsp;
+                            Enabling Creativity&nbsp;Enabling
+                            Creativity&nbsp;Enabling Creativity&nbsp;
                         </Marquee>
                     </div>
                     <div className="flex flex-col justify-between gap-20 rounded-3xl bg-zinc-900 p-6 lg:col-span-2 lg:col-start-9 lg:row-span-3 lg:row-start-1">
@@ -405,6 +407,7 @@ export default function Home() {
                             onMouseLeave={() => {
                                 setIsBrainImageCursorVisible(true);
                             }}
+                            tabIndex="0"
                         >
                             info@indiahci.org
                         </a>

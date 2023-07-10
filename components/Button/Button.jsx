@@ -22,12 +22,14 @@ export default function Button({
         <LinkTag
             className={`${className} ${
                 widthMode === 'full' ? 'gap-6' : 'w-min gap-0'
-            } z-20 flex h-[4.5rem] items-center justify-center whitespace-nowrap rounded-full border-2 border-amber-500 bg-zinc-900 px-8 text-sm font-semibold uppercase text-white shadow-xl transition duration-300 hover:scale-[1.01] hover:bg-zinc-800`}
+            } z-20 flex min-h-[4.5rem] items-center justify-center whitespace-nowrap rounded-full border-2 border-amber-500 bg-zinc-900 px-8 text-sm font-semibold uppercase text-white shadow-xl transition duration-300 hover:scale-[1.01] hover:bg-zinc-800 focus:border-red-500 focus:outline-8 focus:outline-red-500`}
             href={linkHref}
             {...(linkType === 'external' && {
                 target: '_blank',
                 rel: 'noopener noreferrer',
             })}
+            role="button"
+            tabIndex="0"
         >
             {label}
             <div
@@ -37,7 +39,7 @@ export default function Button({
                 }}
             >
                 {widthMode === 'full' && (
-                    <Marquee speed="10" direction="right">
+                    <Marquee tabIndex="-1" speed="10" direction="right">
                         <Image
                             className="min-w-max"
                             src={swiggleYellow}

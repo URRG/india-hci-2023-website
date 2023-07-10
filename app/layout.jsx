@@ -1,6 +1,6 @@
 'use client';
 
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
@@ -16,6 +16,17 @@ import indiaHciLogo from '../public/logos/india-hci-2023-logo.svg';
 import './globals.css';
 
 export default function RootLayout({ children }) {
+    // Remove all marquees from tabindex order manually
+    useEffect(() => {
+        setTimeout(() => {
+            const marqueeContainers =
+                document.querySelectorAll('.marquee-container');
+            marqueeContainers.forEach((marqueeContainer) => {
+                marqueeContainer.setAttribute('tabindex', '-1');
+            });
+        }, 1000);
+    }, []);
+
     return (
         <html lang="en">
             <Helmet>
