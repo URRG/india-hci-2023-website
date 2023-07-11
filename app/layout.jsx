@@ -40,7 +40,6 @@ export default function RootLayout({ children }) {
             <body
                 className={`${degularDisplay.variable} ${ttHoves.variable} bg-zinc-900`}
             >
-                <div> <MyApp /> </div>
                 <div className="bg-white">
                     <header className="container mx-auto flex items-start justify-between bg-white px-5 pt-5 md:pt-10">
                         <a href={process.env.BASE_PATH}>
