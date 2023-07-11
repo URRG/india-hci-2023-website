@@ -14,6 +14,72 @@ import brain from '../public/images/brain.svg';
 import gradient from '../public/videos/gradient.webm';
 
 export default function Home() {
+    const tracks = [
+        {
+            name: 'Papers',
+            description: [
+                'India HCI 2023 is the 14th edition of the international conference series on Human-Computer Interaction. India HCI brings together researchers and practitioners from diverse areas that include traditional graphical & web user interfaces, tangible & ubiquitous computing, virtual & augmented reality, multimedia, new input & output devices, computer games, privacy, security, visualisation, health, accessibility and ageing, design, user modelling, engineering interactive systems, ICT for development, CSCW, and more.',
+                'Papers are the main medium for conveying new research results at India HCI.',
+            ],
+            linkHref: '/papers',
+        },
+        {
+            name: 'Poster & Demos',
+            description: [
+                'Posters and Demonstrations at India HCI 2023 will showcase your novel implementations, interaction designs, concepts, techniques, devices, or systems to a wider audience at the conference and provide opportunities to interact with each other. We welcome posters, demonstrations & interactivity prototypes from students and researchers in all stages of their careers.',
+            ],
+            linkHref: '/posters-and-demos',
+        },
+        {
+            name: 'Workshops & Courses',
+            description: [
+                'Workshops are intended for sharing skills and knowledge with attendees to meet in the context of a focused and interactive discussion. Workshops are interactive sessions where participants collaborate and work on a common topic.',
+                'Courses are sessions, which provide opportunity to extend your knowledge and experience in the field of design. We welcome proposals on topic fall under HCI and allied fields.',
+            ],
+            linkHref: '/workshops-and-courses',
+        },
+        {
+            name: 'Student Research Consortium',
+            description: [
+                'The Student Research Consortium is a venue for undergraduate, postgraduate, and doctoral students (early stage) to showcase their research project work in research, engineering, design, psychology, sociology, anthropology, and the digital arts.',
+                'This may include classroom projects, semester-long projects, year-long graduation projects, and other research projects.',
+            ],
+            linkHref: '/',
+        },
+        {
+            name: 'Student Design Consortium',
+            description: [
+                'The Student Design Consortium is a venue for undergraduate, postgraduate, and doctoral students (early stage) to showcase their design project work in research, engineering, design, psychology, sociology, anthropology, and the digital arts.',
+                'This may include classroom projects, semester-long projects, year-long graduation projects, and other design projects.',
+            ],
+            linkHref: '/',
+        },
+        {
+            name: 'India HCI Mixer 2023',
+            description: [
+                'We are back with our Industry Presentation Track “India HCI Mixer 2023”.',
+                'We have conceptualised the Mixer 2023 to be a high visibility & high-impact forum for Design Thinkers, Customer Experience (CX) / User Experience (UX) practitioners, strategists, product owners, product developers to share, learn and grow through collaboration.',
+                'Please note, this is not an archival oriented paper submission or case study track.',
+            ],
+            linkHref: '/',
+        },
+        {
+            name: 'Art',
+            description: [
+                'We are thrilled to announce the introduction of the Art Track in this year\'s India HCI Conference, aligned with our theme - "HCI for Enabling Creativity". This innovative and expressive component of our conference encourages the exploration of the intersection between creativity, human-computer interaction (HCI), art, technology, and design.',
+                'As we continuously strive to push the boundaries of knowledge and practice, we see immense potential in harnessing the power of art to present complex HCI ideas in a more engaging and thought-provoking manner.',
+            ],
+            linkHref: '/',
+        },
+        {
+            name: 'Women in HCI',
+            description: [
+                'Women have made significant contributions to the field of Human-Computer Interaction, shaping and advancing the discipline in numerous ways. From the early pioneers to the current generation of researchers, designers, and practitioners, women have played a crucial role in understanding and improving the interaction between humans and technology.',
+            ],
+            linkHref: '/',
+        },
+    ];
+
     const parentRef = useRef(null);
     const [imFeelingCreativeSent, setImFeelingCreativeSent] = useState(false);
     const [creativityEnabled, setCreativityEnabled] = useState(false);
@@ -31,6 +97,8 @@ export default function Home() {
 
     const [isBrainImageCursorVisible, setIsBrainImageCursorVisible] =
         useState(true);
+
+    const [activeTrackCarouselItem, setActiveTrackCarouselItem] = useState(0);
 
     useEffect(() => {
         const calculateTimeToEvent = () => {
@@ -262,6 +330,7 @@ export default function Home() {
                         href="https://goo.gl/maps/2PSCKqNF95YrLyaeA"
                         target="_blank"
                         rel="noopener noreferrer"
+                        tabIndex="0"
                     >
                         <div className="absolute inset-0 bg-black opacity-50 transition duration-300 group-hover:opacity-0" />
                         <Icon
@@ -272,7 +341,7 @@ export default function Home() {
                             School of Design, UPES, Dehradun
                         </span>
                     </a>
-                    <div className="align-center relative flex overflow-hidden rounded-3xl bg-zinc-50 lg:col-span-2 lg:col-start-7 lg:row-span-2 lg:row-start-3">
+                    <div className="align-center pointer-events-none relative flex overflow-hidden rounded-3xl bg-zinc-50 lg:col-span-2 lg:col-start-7 lg:row-span-2 lg:row-start-3">
                         <video
                             className="pointer-events-none absolute left-0 top-0 h-full w-full object-cover"
                             src={gradient}
@@ -284,7 +353,8 @@ export default function Home() {
                             tabIndex={-1}
                         />
                         <Marquee className="pb-8 pt-6 font-heading text-6xl text-zinc-900/70 mix-blend-overlay">
-                            Enabling Creativity&nbsp;
+                            Enabling Creativity&nbsp;Enabling
+                            Creativity&nbsp;Enabling Creativity&nbsp;
                         </Marquee>
                     </div>
                     <div className="flex flex-col justify-between gap-20 rounded-3xl bg-zinc-900 p-6 lg:col-span-2 lg:col-start-9 lg:row-span-3 lg:row-start-1">
@@ -405,104 +475,100 @@ export default function Home() {
                             onMouseLeave={() => {
                                 setIsBrainImageCursorVisible(true);
                             }}
+                            tabIndex="0"
                         >
                             info@indiahci.org
                         </a>
                     </div>
                 </div>
-                <Button
-                    className="container sticky bottom-4 mt-4 lg:static lg:bottom-auto"
-                    label="Register"
-                    widthMode="full"
-                    linkType="external"
-                    linkHref="https://account.indiahci.org"
-                />
-                <Image
-                    className="mb-36 mt-40 animate-[spin_30s_linear_infinite]"
-                    src={humanIntelligence}
-                    alt="Human intelligence and some sparks of AGI only"
-                    width={140}
-                    height={140}
-                />
-                <div className="grid grid-cols-12 flex-col gap-4">
-                    <div className="col-span-full flex flex-col justify-between gap-6 rounded-3xl bg-zinc-100 p-6 lg:col-span-4">
-                        <div className="flex flex-col gap-6">
-                            <h1 className="bg-gradient-to-br from-amber-500 via-orange-500 via-30% to-[#FF0048] bg-clip-text font-heading text-2xl text-transparent sm:text-4xl">
-                                Call for Papers
-                            </h1>
-                            <p className="font-body text-base text-zinc-900">
-                                India HCI 2023 is the 14th edition of the
-                                international conference series on
-                                Human-Computer Interaction (HCI). Papers are the
-                                main medium for conveying new research results
-                                at India HCI 2023. We seek submissions that push
-                                the boundaries of human knowledge and that
-                                describe original, unpublished work in the field
-                                of HCI.
-                            </p>
-                        </div>
-                        <Button
-                            className="mt-8"
-                            label="Read More"
-                            widthMode="auto"
-                            linkType="internal"
-                            linkHref="/call-for-papers"
-                        />
-                    </div>
-                    <div className="col-span-full flex flex-col justify-between gap-6 rounded-3xl bg-zinc-100 p-6 lg:col-span-4">
-                        <div className="flex flex-col gap-6">
-                            <h1 className="bg-gradient-to-br from-amber-500 via-orange-500 via-30% to-[#FF0048] bg-clip-text font-heading text-2xl text-transparent sm:text-4xl">
-                                Call for Posters & Demos
-                            </h1>
-                            <p className="font-body text-base text-zinc-900">
-                                Posters and Demonstrations at India HCI 2023
-                                will showcase your novel implementations,
-                                interaction designs, concepts, techniques,
-                                devices, or systems to a wider audience at the
-                                conference and provide opportunities to interact
-                                with each other. We welcome posters,
-                                demonstrations & interactivity prototypes from
-                                students and researchers in all stages of their
-                                careers.
-                            </p>
-                        </div>
-                        <Button
-                            className="mt-8"
-                            label="Read More"
-                            widthMode="auto"
-                            action="link"
-                            linkType="internal"
-                            linkHref="/call-for-posters"
-                        />
-                    </div>
-                    <div className="col-span-full flex flex-col justify-between gap-6 rounded-3xl bg-zinc-100 p-6 lg:col-span-4">
-                        <div className="flex flex-col gap-6">
-                            <h1 className="bg-gradient-to-br from-amber-500 via-orange-500 via-30% to-[#FF0048] bg-clip-text font-heading text-2xl text-transparent sm:text-4xl">
-                                Call for Workshops & Courses
-                            </h1>
-                            <p className="font-body text-base text-zinc-900">
-                                Workshops are intended for sharing skills and
-                                knowledge with attendees to meet in the context
-                                of a focused and interactive discussion. Courses
-                                are sessions, which provide opportunity to
-                                extend your knowledge and experience in the
-                                field of design. We welcome proposals on topic
-                                fall under HCI and allied fields.
-                            </p>
-                        </div>
-                        <Button
-                            className="mt-8"
-                            label="Read More"
-                            widthMode="auto"
-                            action="link"
-                            linkType="internal"
-                            linkHref="/call-for-workshops-and-courses"
-                        />
+                <div className="container">
+                    <Button
+                        className="sticky bottom-4 mt-4 lg:static lg:bottom-auto"
+                        label="Register"
+                        widthMode="full"
+                        linkType="external"
+                        linkHref="https://account.indiahci.org"
+                    />
+                    <Image
+                        className="mx-auto mb-40 mt-40 animate-[spin_30s_linear_infinite]"
+                        src={humanIntelligence}
+                        alt="Human intelligence and some sparks of AGI only"
+                        width={140}
+                        height={140}
+                    />
+                    <div className="flex flex-col gap-4 2xl:h-[32rem] 2xl:flex-row">
+                        {tracks.map((track, index) => (
+                            <div
+                                className={`${
+                                    activeTrackCarouselItem === index
+                                        ? 'cursor-default bg-zinc-900 2xl:grow-[6]'
+                                        : 'bg-zinc-100 max-2xl:h-24 max-sm:h-20 2xl:grow'
+                                } relative flex flex-col justify-between gap-6 rounded-3xl bg-zinc-100 p-6 transition-all duration-300 2xl:h-full 2xl:w-min`}
+                                onMouseEnter={() =>
+                                    setActiveTrackCarouselItem(index)
+                                }
+                                onClick={(event) => {
+                                    if (event.type === 'touchend') {
+                                        setActiveTrackCarouselItem(index);
+                                    }
+                                }}
+                                onFocus={() =>
+                                    setActiveTrackCarouselItem(index)
+                                }
+                                onKeyDown={() =>
+                                    setActiveTrackCarouselItem(index)
+                                }
+                                tabIndex="0"
+                                role="button"
+                            >
+                                <div className="flex flex-col gap-6">
+                                    <h1
+                                        className={`${
+                                            activeTrackCarouselItem === index
+                                                ? 'rotate-0'
+                                                : '2xl:absolute 2xl:bottom-0 2xl:-rotate-90'
+                                        } whitespace-nowrap bg-gradient-to-br from-amber-500 via-orange-500 via-30% to-[#FF0048] bg-clip-text font-heading text-2xl text-transparent sm:text-4xl 2xl:origin-top-left`}
+                                    >
+                                        {track.name}
+                                    </h1>
+                                    {track.description.map((paragraph) => (
+                                        <p
+                                            className={`${
+                                                activeTrackCarouselItem ===
+                                                index
+                                                    ? 'opacity-100 2xl:delay-300'
+                                                    : 'w-0 opacity-0'
+                                            } font-body text-base font-normal text-zinc-300 transition-all duration-0`}
+                                        >
+                                            {paragraph}
+                                        </p>
+                                    ))}
+                                </div>
+                                <Button
+                                    className={`${
+                                        activeTrackCarouselItem === index
+                                            ? track.linkHref !== '/'
+                                                ? 'flex'
+                                                : 'pointer-events-none flex'
+                                            : 'hidden'
+                                    } 2xl:absolute 2xl:bottom-6`}
+                                    label={
+                                        track.linkHref !== '/'
+                                            ? 'Read More'
+                                            : 'Coming Soon'
+                                    }
+                                    widthMode="auto"
+                                    action="link"
+                                    linkType="internal"
+                                    linkHref={track.linkHref}
+                                />
+                            </div>
+                        ))}
                     </div>
                 </div>
             </main>
-            <div className="-ml-[10%] mt-60 h-80 w-[120%] self-center bg-gradient-to-r from-amber-500 via-orange-500 via-30% to-[#ff2d68] blur-[100px]" />
-            <Marquee className="-mt-72 mb-12 h-16 font-heading text-6xl text-zinc-900/30 mix-blend-overlay lg:h-28 lg:text-[100px]">
+            <div className="-ml-[10%] mt-60 h-80 w-[120%] self-center bg-gradient-to-r from-amber-500 via-orange-500 via-30% to-[#ff2d68] blur-[100px] 2xl:mt-80" />
+            <Marquee className="pointer-events-none -mt-72 mb-12 h-16 overflow-clip font-heading text-6xl text-zinc-900/30 mix-blend-overlay lg:h-28 lg:text-[100px]">
                 Enabling&nbsp;Creativity&nbsp;Enabling&nbsp;Creativity&nbsp;Enabling&nbsp;Creativity&nbsp;
             </Marquee>
         </div>
