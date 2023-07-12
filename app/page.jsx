@@ -521,13 +521,21 @@ export default function Home() {
                                 tabIndex="0"
                                 role="button"
                             >
-                                <div className="flex flex-col gap-6">
+                                <div
+                                    className={twJoin(
+                                        'flex flex-col gap-6',
+                                        activeTrackCarouselItem === index
+                                            ? 'items-start'
+                                            : 'items-center'
+                                    )}
+                                >
                                     <h1
                                         className={`${
                                             activeTrackCarouselItem === index
                                                 ? 'rotate-0'
-                                                : '2xl:absolute 2xl:bottom-0 2xl:-rotate-90'
-                                        } whitespace-nowrap bg-gradient-to-br from-amber-500 via-orange-500 via-30% to-[#FF0048] bg-clip-text font-heading text-2xl text-transparent sm:text-4xl 2xl:origin-top-left`}
+                                                : // : '2xl:absolute 2xl:top-8 2xl:rotate-[0deg] 2xl:vertical-writing-lr'
+                                                  'absolute bottom-8 2xl:rotate-180 2xl:vertical-writing-lr'
+                                        } whitespace-nowrap bg-gradient-to-br from-amber-500 via-orange-500 via-30% to-[#FF0048] bg-clip-text font-heading text-2xl text-transparent sm:text-4xl`}
                                     >
                                         {track.name}
                                     </h1>
@@ -537,7 +545,7 @@ export default function Home() {
                                                 activeTrackCarouselItem ===
                                                 index
                                                     ? 'opacity-100 2xl:delay-300'
-                                                    : 'w-0 opacity-0'
+                                                    : 'h-0 w-0 opacity-0'
                                             } font-body text-base font-normal text-zinc-300 transition-all duration-0`}
                                         >
                                             {paragraph}
