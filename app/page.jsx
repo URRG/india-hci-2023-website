@@ -2,12 +2,16 @@
 
 import React, { Fragment, useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
-import { Icon } from '@iconify/react';
+
+import { twJoin } from 'tailwind-merge';
 import Marquee from 'react-fast-marquee';
+import { Icon } from '@iconify/react';
 import { Switch } from '@headlessui/react';
 import Typewriter from 'typewriter-effect';
+
 import Button from '../components/Button/Button';
 import ImageCursor from '../components/ImageCursor/ImageCursor';
+
 import humanIntelligence from '../public/images/human-intelligence.svg';
 import upes from '../public/images/upes.jpg';
 import brain from '../public/images/brain.svg';
