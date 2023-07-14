@@ -528,10 +528,10 @@ export default function Home() {
                             >
                                 <div
                                     className={twJoin(
-                                        'flex flex-col gap-6',
+                                        'flex flex-col',
                                         activeTrackCarouselItem === index
-                                            ? 'items-start'
-                                            : 'items-center'
+                                            ? 'gap-6'
+                                            : 'overflow-clip 2xl:items-center'
                                     )}
                                 >
                                     <h1
