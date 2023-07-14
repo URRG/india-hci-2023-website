@@ -503,11 +503,12 @@ export default function Home() {
                     <div className="flex flex-col gap-4 2xl:h-[32rem] 2xl:flex-row">
                         {tracks.map((track, index) => (
                             <div
-                                className={`${
+                                className={twJoin(
+                                    'relative flex flex-col justify-between gap-6 rounded-3xl bg-zinc-100 transition-all duration-300 2xl:w-min',
                                     activeTrackCarouselItem === index
-                                        ? 'cursor-default bg-zinc-900 2xl:grow-[6]'
-                                        : 'bg-zinc-100 max-2xl:h-24 max-sm:h-20 2xl:grow'
-                                } relative flex flex-col justify-between gap-6 rounded-3xl bg-zinc-100 p-6 transition-all duration-300 2xl:h-full 2xl:w-min`}
+                                        ? 'cursor-default bg-zinc-900 p-6 2xl:grow'
+                                        : 'p-6 2xl:pl-12 2xl:pr-14'
+                                )}
                                 onMouseEnter={() =>
                                     setActiveTrackCarouselItem(index)
                                 }
@@ -534,36 +535,38 @@ export default function Home() {
                                     )}
                                 >
                                     <h1
-                                        className={`${
+                                        className={twJoin(
+                                            'whitespace-nowrap bg-gradient-to-br from-amber-500 via-orange-500 via-30% to-[#FF0048] bg-clip-text font-heading text-2xl text-transparent sm:text-4xl',
                                             activeTrackCarouselItem === index
                                                 ? 'rotate-0'
-                                                : // : '2xl:absolute 2xl:top-8 2xl:rotate-[0deg] 2xl:vertical-writing-lr'
-                                                  'absolute bottom-8 2xl:rotate-180 2xl:vertical-writing-lr'
-                                        } whitespace-nowrap bg-gradient-to-br from-amber-500 via-orange-500 via-30% to-[#FF0048] bg-clip-text font-heading text-2xl text-transparent sm:text-4xl`}
+                                                : '2xl:absolute 2xl:bottom-8 2xl:rotate-180 2xl:vertical-writing-lr'
+                                        )}
                                     >
                                         {track.name}
                                     </h1>
                                     {track.description.map((paragraph) => (
                                         <p
-                                            className={`${
+                                            className={twJoin(
+                                                'font-body text-base font-normal text-zinc-300 transition-all duration-0',
                                                 activeTrackCarouselItem ===
-                                                index
+                                                    index
                                                     ? 'opacity-100 2xl:delay-300'
                                                     : 'h-0 w-0 opacity-0'
-                                            } font-body text-base font-normal text-zinc-300 transition-all duration-0`}
+                                            )}
                                         >
                                             {paragraph}
                                         </p>
                                     ))}
                                 </div>
                                 <Button
-                                    className={`${
+                                    className={twJoin(
+                                        '2xl:absolute 2xl:bottom-6',
                                         activeTrackCarouselItem === index
                                             ? track.linkHref !== '/'
                                                 ? 'flex'
                                                 : 'pointer-events-none flex'
                                             : 'hidden'
-                                    } 2xl:absolute 2xl:bottom-6`}
+                                    )}
                                     label={
                                         track.linkHref !== '/'
                                             ? 'Read More'
