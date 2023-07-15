@@ -11,6 +11,7 @@ import Typewriter from 'typewriter-effect';
 
 import Button from '../components/Button/Button';
 import ImageCursor from '../components/ImageCursor/ImageCursor';
+import Video from '../components/Video/Video';
 
 import humanIntelligence from '../public/images/human-intelligence.svg';
 import upes from '../public/images/upes.jpg';
@@ -315,17 +316,13 @@ export default function Home() {
                                 </button>
                             )}
                         </Switch>
-                        <video
-                            className={`${
+                        <Video
+                            className={twJoin(
+                                'pointer-events-none absolute left-0 top-0 h-full w-full object-cover transition duration-300',
                                 creativityEnabled ? 'opacity-100' : 'opacity-0'
-                            } pointer-events-none absolute left-0 top-0 h-full w-full rounded-2xl object-cover transition duration-300`}
+                            )}
                             src={gradient}
-                            playsInline
                             autoPlay
-                            loop
-                            muted
-                            disablePictureInPicture
-                            tabIndex={-1}
                         />
                     </div>
                     <a
@@ -345,16 +342,11 @@ export default function Home() {
                             School of Design, UPES, Dehradun
                         </span>
                     </a>
-                    <div className="align-center pointer-events-none relative flex overflow-hidden rounded-3xl bg-zinc-50 lg:col-span-2 lg:col-start-7 lg:row-span-2 lg:row-start-3">
-                        <video
+                    <div className="align-center relative flex overflow-clip rounded-3xl bg-zinc-50 lg:col-span-2 lg:col-start-7 lg:row-span-2 lg:row-start-3">
+                        <Video
                             className="pointer-events-none absolute left-0 top-0 h-full w-full object-cover"
                             src={gradient}
-                            playsInline
                             autoPlay
-                            loop
-                            muted
-                            disablePictureInPicture
-                            tabIndex={-1}
                         />
                         <Marquee className="pb-8 pt-6 font-heading text-6xl text-zinc-900/70 mix-blend-overlay">
                             Enabling Creativity&nbsp;Enabling
