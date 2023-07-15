@@ -260,7 +260,7 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
-                    <div className="relative flex flex-col justify-between gap-6 rounded-3xl bg-zinc-100 p-6 lg:col-span-4 lg:col-start-5 lg:row-span-2 lg:row-start-1">
+                    <div className="relative flex flex-col justify-between gap-6 overflow-clip rounded-3xl bg-zinc-100 p-6 lg:col-span-4 lg:col-start-5 lg:row-span-2 lg:row-start-1">
                         <p
                             className={`${
                                 creativityEnabled
