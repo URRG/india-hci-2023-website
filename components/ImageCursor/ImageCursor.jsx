@@ -5,10 +5,10 @@ import Image from 'next/image';
 function ImageCursor({
     parentRef,
     imageSrc,
-    imageAlt,
+    imageAlt = '',
     imageSize,
     imagePosition,
-    shouldSnapBack,
+    shouldSnapBack = true,
 }) {
     const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
     const [isOutsideParent, setIsOutsideParent] = useState(false);
@@ -85,11 +85,6 @@ ImageCursor.propTypes = {
         left: PropTypes.number,
     }).isRequired,
     shouldSnapBack: PropTypes.bool,
-};
-
-ImageCursor.defaultProps = {
-    imageAlt: '',
-    shouldSnapBack: true,
 };
 
 export default React.memo(ImageCursor);
