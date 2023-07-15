@@ -3,7 +3,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 
-export default function Video({ className, src, autoPlay, ...props }) {
+export default function Video({
+    className = '',
+    src,
+    autoPlay = false,
+    ...props
+}) {
     const [canAutoPlay, setCanAutoPlay] = useState(false);
 
     const ref = useRef();
@@ -53,9 +58,4 @@ Video.propTypes = {
     className: PropTypes.string,
     src: PropTypes.string.isRequired,
     autoPlay: PropTypes.bool,
-};
-
-Video.defaultProps = {
-    className: '',
-    autoPlay: false,
 };
