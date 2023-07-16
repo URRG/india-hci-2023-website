@@ -2,7 +2,7 @@
 
 import React, { Fragment, useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
-
+import Link from 'next/link';
 import { twJoin } from 'tailwind-merge';
 import Marquee from 'react-fast-marquee';
 import { Icon } from '@iconify/react';
@@ -576,6 +576,19 @@ export default function Home() {
                             </div>
                         ))}
                     </div>
+                    <Link
+                        className="relative mt-48 flex h-40 items-center overflow-clip whitespace-nowrap rounded-3xl bg-zinc-900 p-6 font-heading text-2xl text-white shadow-xl transition duration-300 hover:scale-[1.01] hover:bg-zinc-800 sm:p-8 sm:text-4xl"
+                        href="/organising-committee"
+                    >
+                        Meet the Organising Committee
+                        <Image
+                            className="absolute -right-20 -top-20 sm:-bottom-4 sm:-right-4 sm:top-auto"
+                            src={brain}
+                            alt="Brain"
+                            width="140"
+                            height="140"
+                        />
+                    </Link>
                 </div>
             </main>
             <div className="-ml-[10%] mt-60 h-80 w-[120%] self-center bg-gradient-to-r from-amber-500 via-orange-500 via-30% to-[#ff2d68] blur-[100px] 2xl:mt-80" />

@@ -23,7 +23,7 @@ export default function EnablingCreativityMarqueeCard({ className = '' }) {
                 autoPlay
             />
             <Marquee className="pointer-events-none pb-8 pt-6 font-heading text-6xl text-zinc-900/70 mix-blend-overlay">
-                Enabling&nbsp;Creativity&nbsp;Enabling&nbsp;Creativity&nbsp;Enabling&nbsp;Creativity&nbsp;
+                Enabling&nbsp;Creativity&nbsp;Enabling&nbsp;Creativity&nbsp;Enabling&nbsp;Creativity&nbsp;Enabling&nbsp;Creativity&nbsp;Enabling&nbsp;Creativity&nbsp;Enabling&nbsp;Creativity&nbsp;Enabling&nbsp;Creativity&nbsp;
             </Marquee>
         </div>
     );

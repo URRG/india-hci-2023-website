@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
     }, []);
 
     return (
-        <html lang="en">
+        <html lang="en" className="scroll-smooth">
             <Helmet>
                 <title>India HCI 2023 - HCI For Enabling Creativity</title>
                 <meta
