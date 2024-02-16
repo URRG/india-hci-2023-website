@@ -14,7 +14,7 @@ module.exports = {
                 sm: '640px',
                 md: '768px',
                 lg: '1024px',
-                xl: '1440px',
+                xl: '1280px',
             },
         },
         extend: {
@@ -26,6 +26,7 @@ module.exports = {
     },
     plugins: [
         require('@tailwindcss/container-queries'),
+        require('@tailwindcss/typography'),
         require('@headlessui/tailwindcss'),
         plugin(({ addUtilities }) => {
             addUtilities({

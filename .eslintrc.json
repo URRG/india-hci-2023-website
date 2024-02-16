@@ -4,6 +4,11 @@
   "rules": {
     "prettier/prettier": ["error"],
     "no-unused-vars": ["warn"],
+    "react/require-default-props": ["error",
+    {
+      "forbidDefaultForRequired": true,
+      "functions": "defaultArguments"
+    }],
     "react/forbid-prop-types": ["off"],
     "react/jsx-props-no-spreading": ["off"],
     "no-nested-ternary": ["off"]
